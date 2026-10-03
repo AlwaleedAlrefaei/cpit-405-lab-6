@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CPIT-405 Lab 6</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="container">
+    <h1>Like or Dislike</h1>
+    <p class="subtitle">Vote once, leave one comment, or reset your choices.</p>
+
+    <section class="vote-section">
+      <button id="likeBtn" class="vote-btn like-btn" type="button">
+        👍 Like <span id="likeCount">0</span>
+      </button>
+
+      <button id="dislikeBtn" class="vote-btn dislike-btn" type="button">
+        👎 Dislike <span id="dislikeCount">0</span>
+      </button>
+    </section>
+
+    <p id="voteMessage" class="message" aria-live="polite"></p>
+
+    <section class="comment-section">
+      <h2>Leave a Comment</h2>
+
+      <div class="comment-form">
+        <input
+          id="commentInput"
+          type="text"
+          placeholder="Write your comment..."
+          maxlength="200"
+          aria-label="Comment"
+        >
+        <button id="submitCommentBtn" type="button">Submit</button>
+      </div>
+
+      <p id="commentMessage" class="message" aria-live="polite"></p>
+
+      <div class="comments-box">
+        <h3>Comments</h3>
+        <ul id="commentsList"></ul>
+      </div>
+    </section>
+
+    <button id="resetBtn" class="reset-btn" type="button">Reset</button>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
